@@ -1,0 +1,33 @@
+post:
+    path:  /
+    defaults: { _controller: RoleVotersBlogBundle:Post:index }
+
+users:
+    path: /users
+    defaults: { _controller: RoleVotersBlogBundle:User:index }
+
+profile:
+    path: /profile
+    defaults: { _controller: RoleVotersBlogBundle:User:profile }
+
+login:
+    path:   /login
+    defaults:  { _controller: RoleVotersBlogBundle:Security:login }
+
+login_check:
+    path:   /profile/login_check
+
+logout:
+    path:   /profile/logout
+  
+RoleVotersBlogBundle_post:
+    resource: "@RoleVotersBlogBundle/Resources/config/routing/post.yml"
+    prefix:   /post
+
+RoleVotersBlogBundle_user:
+    resource: "@RoleVotersBlogBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+RoleVotersBlogBundle_comment:
+    resource: "@RoleVotersBlogBundle/Resources/config/routing/comment.yml"
+    prefix:   /comment

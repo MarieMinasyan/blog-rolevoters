@@ -1,0 +1,29 @@
+comment:
+    pattern:  /
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:index" }
+
+comment_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:show" }
+
+comment_new:
+    pattern:  /new
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:new" }
+
+comment_create:
+    pattern:  /create
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:create" }
+    requirements: { _method: post }
+
+comment_edit:
+    pattern:  /{postId}/{id}/edit
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:edit" }
+
+comment_update:
+    pattern:  /{postId}/{id}/update
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:update" }
+    requirements: { _method: post|put }
+
+comment_delete:
+    pattern:  /{postId}/{id}/delete
+    defaults: { _controller: "RoleVotersBlogBundle:Comment:delete" }

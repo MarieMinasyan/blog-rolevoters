@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Role Voters Blog{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/rolevotersblog/css/blog.css') }}" />
+            {#<link rel="stylesheet" href="{{ asset('css/responsive.less') }}">#}
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body>
+        <div class="content">
+
+            <div class="header">
+                <h1>Role Voters Blog</h1>
+            </div>
+
+            <div class="navbar">
+                <div class="navbar-inner">{{ knp_menu_render('RoleVotersBlogBundle:Builder:mainMenu', {'nav_type': 'navbar'}) }}</div>
+            </div>
+
+            {% block body %}{% endblock %}
+
+        </div>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

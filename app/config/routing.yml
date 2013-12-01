@@ -1,0 +1,4 @@
+ace_blog:
+    resource: "@RoleVotersBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

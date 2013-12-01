@@ -1,0 +1,13 @@
+parameters:
+#    ace_blog.example.class: RoleVoters\BlogBundle\Example
+
+services:
+#    ace_blog.example:
+#        class: %ace_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    object_voter:
+        class: RoleVoters\BlogBundle\Securtiy\ObjectVoter
+        public: false
+        arguments: ["%customRoles%"]
+        tags:
+            - { name: security.voter }
