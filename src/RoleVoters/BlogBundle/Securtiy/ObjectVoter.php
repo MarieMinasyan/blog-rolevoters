@@ -47,7 +47,7 @@ class ObjectVoter extends RoleVoter
             $result = VoterInterface::ACCESS_DENIED;
 
             if ($object->getUser() === $token->getUser() || in_array('ROLE_ADMIN', $token->getRoles())) {
-                $result = VoterInterface::ACCESS_GRANTED;
+                return VoterInterface::ACCESS_GRANTED;
             }
         }
 
